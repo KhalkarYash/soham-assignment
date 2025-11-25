@@ -1,0 +1,181 @@
+.profile-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.cover-photo {
+  height: 300px;
+  overflow: hidden;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+  margin-top: -50px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.profile-info .info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  margin: 0 0 5px 0;
+  font-size: 28px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  color: #65676b;
+  font-size: 14px;
+}
+
+.profile-info .bio {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #1c1e21;
+}
+
+.add-friend-btn {
+  padding: 10px 24px;
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.add-friend-btn:hover {
+  background: #0a66c2;
+}
+
+.profile-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.friends-section h3, .posts-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+.friend-card {
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f0f2f5;
+}
+
+.friend-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.friend-card p {
+  font-size: 13px;
+  margin: 0;
+  color: #1c1e21;
+}
+
+.posts-section {
+  border-top: 1px solid #e5e5ea;
+  padding-top: 20px;
+}
+
+.post-preview {
+  background: #f0f2f5;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.post-preview p {
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+  color: #1c1e21;
+}
+
+.post-preview img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.post-preview small {
+  color: #65676b;
+  font-size: 12px;
+}
+
+.no-posts {
+  color: #65676b;
+  padding: 20px;
+  text-align: center;
+}
+
+.loading, .error {
+  padding: 40px;
+  text-align: center;
+  color: #65676b;
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .add-friend-btn {
+    align-self: center;
+  }
+}
